@@ -17,6 +17,19 @@ public class Exercicio {
 //  IMC<20 – Abaixo do Peso
 // IMC>20 e <27 – Peso Normal
 // IMC>27 – Acima do Peso
+// resolução exe6 IfElse
+
+//    System.out.println("Informe a altura");
+//    double altura = sc.nextDouble();
+//    System.out.println("Informe o sexo: 1- Feminino; 2-Masculino;");
+//    int sexo = sc.nextInt();
+//    double pesoIdeal;
+//    if (sexo == 1) {// Feminino
+//        pesoIdeal = 62.1 * altura - 44.7;
+//    } else { // Masculino
+//        pesoIdeal = 72.7 * altura - 58;
+//    }
+//    System.out.println("Seu peso idel é " + pesoIdeal + " Kg");
 
     public void Exercicio1() {
 
@@ -33,15 +46,21 @@ public class Exercicio {
      int peso = sc.nextInt();
      double Altura = sc.nextDouble();
      
-     double imc =peso/Altura*Altura;
-
+    double imc = peso/(Altura*Altura);
+    
      if (imc<20 && sexo==1) {
-        System.out.println(" Seu imc é igual a " + peso/Altura*Altura + "está abaixo do peso e deve praticar atividades");
-     } if (imc>20 && imc<27) {
-        System.out.println("Você está com o seu peso normal ");
-     }if (imc>27) {
-        System.out.println(" Seu imc está igual"+ peso/Altura*Altura + "prátique atividades Leves");
+        System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis.  Ganhe entre " + (62.1* Altura - 44.7) + " Kg/m² para estar no seu peso ideal" );
+     }if (imc<20 && sexo==2) {
+        System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
+     }if (imc>20 && imc<27 && sexo==1){
+      System.out.println(" Seu imc é igual"  + peso/(Altura*Altura) +  " seu peso normal " );
+     }if (imc>20 && imc<27 && sexo==2) {
+        System.out.println(" Seu imc é igual"  + peso/(Altura*Altura) +  " seu peso normal " );
+     }if (imc>27 && sexo==1) {
+        System.out.println( " Seu imc está igual " + peso/(Altura*Altura) + " prátique atividades Leves, " + (62.1* Altura - 44.7) + " Kg/m² este é o valor que você precisaria perder para estar no peso ideal." );
+     }if (imc>27 && sexo==2) {
+      System.out.println( " Seu imc está igual " + peso/(Altura*Altura) + " prátique atividades Leves para chegar "  + (72.7* Altura - 58) + " Kg/m² este é o seu peso ideal." );
      }
-     
- }
-}   
+    }
+   }  
+ 
