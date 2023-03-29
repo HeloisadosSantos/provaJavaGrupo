@@ -30,6 +30,25 @@ public class Exercicio {
 //        pesoIdeal = 72.7 * altura - 58;
 //    }
 //    System.out.println("Seu peso idel é " + pesoIdeal + " Kg");
+// Identificar a Faixa Etário do Aluno:
+// Idade I - 16 a 25 anos
+// Idade II - 25 a 35 anos
+// Idade III – 36 a 45 anos
+// Idade IV – 46 a 55 anos
+// Idade V – 56 a 65 anos
+// Idade VI – 66+
+
+
+// Musculação Intensa    Difícil   II, III
+// Luta                  Difícil   I, II, III, IV
+// Pilates               Difícil   IV, V, VI
+
+// Musculação Moderada   Moderada  I, II, III, IV
+// Corrida               Moderada  II, III, IV, V
+// Dança                 Moderada  Todas
+
+// Musculação Leve       Leve      I, IV, V, VI
+// Ioga                  Leve      Todas
 
     public void Exercicio1() {
 
@@ -38,7 +57,7 @@ public class Exercicio {
      
      System.out.println("Digite a sua idade");
      int idade = sc.nextInt();
-
+     
      System.out.println("Digite seu sexo 1 para Feminino 2 Masculino");
      int sexo = sc.nextInt();
 
@@ -47,20 +66,46 @@ public class Exercicio {
      double Altura = sc.nextDouble();
      
     double imc = peso/(Altura*Altura);
-    
-     if (imc<20 && sexo==1) {
-        System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis.  Ganhe entre " + (62.1* Altura - 44.7) + " Kg/m² para estar no seu peso ideal" );
-     }if (imc<20 && sexo==2) {
-        System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
-     }if (imc>20 && imc<27 && sexo==1){
-      System.out.println(" Seu imc é igual"  + peso/(Altura*Altura) +  " seu peso normal " );
-     }if (imc>20 && imc<27 && sexo==2) {
-        System.out.println(" Seu imc é igual"  + peso/(Altura*Altura) +  " seu peso normal " );
-     }if (imc>27 && sexo==1) {
-        System.out.println( " Seu imc está igual " + peso/(Altura*Altura) + " prátique atividades Leves, " + (62.1* Altura - 44.7) + " Kg/m² este é o valor que você precisaria perder para estar no peso ideal." );
+   // I
+      if (imc<20 && sexo==1 && idade>16 && idade<25) {
+        System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades diciceis como: Luta.  Ganhe entre " + (62.1* Altura - 44.7) + " Kg/m² para estar no seu peso ideal" );
+   // I  
+      }if (imc<20 && sexo==2 && idade>16 && idade<25) {
+        System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
+   // II
+      }if (imc<20 && sexo==2 && idade>25 && idade<35) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta,Musculação Intensa.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
+   // II
+      }if (imc<20 && sexo==1 && idade>25 && idade<35) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta,Musculação Intensa.  Ganhe entre " + (62.1* Altura - 44.7) + " Kg/m² para estar no seu peso ideal");
+   // III
+      }if (imc<20 && sexo==2 && idade>36 && idade<45) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta,Musculação Intensa.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
+   // III
+      }if (imc<20 && sexo==1 && idade>36 && idade<45) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta,Musculação Intensa.  Ganhe entre " + (62.1* Altura - 44.7) + " Kg/m² para estar no seu peso ideal");
+   // IV
+      }if (imc<20 && sexo==2 && idade>46 && idade<55) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
+   // IV
+      }if (imc<20 && sexo==1 && idade>46 && idade<55) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta,Pilates.  Ganhe entre " + (62.1* Altura - 44.7) + " Kg/m² para estar no seu peso ideal");
+   // V
+      }if (imc<20 && sexo==2 && idade>56 && idade<65) {
+         System.out.println(" Seu imc é igual a " + peso/(Altura*Altura) + " está abaixo do peso e deve praticar atividades dificeis como: Luta.  Ganhe entre " + (72.7* Altura - 58) + " Kg/m² para estar no seu peso ideal");
+
+     }if (imc>20 && imc<27 && sexo==1 && idade>25 && idade<35){
+      System.out.println(" Seu imc é igual"  + peso/(Altura*Altura) +  " seu peso normal então pratique atividades moderadas como: Musculação,Dança,Corrida" );
+     }if (imc>20 && imc<27 && sexo==2 && idade>25 && idade<35) {
+        System.out.println(" Seu imc é igual"  + peso/(Altura*Altura) +  " seu peso normal então pratique atividades moderadas como: Musculação,Dança,Corrida " );
+
+
+     }if (imc>27 && sexo==1 && idade>36 && idade<45) {
+        System.out.println( " Seu imc está igual " + peso/(Altura*Altura) + " prátique atividades Leves como: Dança para chegar " + (62.1* Altura - 44.7) + " Kg/m² este é o valor que você precisaria perder para estar no peso ideal." );
      }if (imc>27 && sexo==2) {
-      System.out.println( " Seu imc está igual " + peso/(Altura*Altura) + " prátique atividades Leves para chegar "  + (72.7* Altura - 58) + " Kg/m² este é o seu peso ideal." );
+      System.out.println( " Seu imc está igual " + peso/(Altura*Altura) + " prátique atividades Leves como: Dança para chegar "  + (72.7* Altura - 58) + " Kg/m² este é o valor que você precisaria perder para estar no peso ideal." );
      }
+
     }
    }  
  
